@@ -149,7 +149,7 @@ public final class CameraManager {
     if (theCamera != null && !previewing) {
        Camera.Parameters p;
        p = camera.getParameters();
-       p.setFlashMode(Camera.Parameters.FLASH_ON);
+       p.setFlashMode(Camera.Parameters.FLASH_MODE_ON);
        camera.setParameters(p);
       theCamera.startPreview();
       previewing = true;
