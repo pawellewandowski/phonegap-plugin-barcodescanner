@@ -147,27 +147,7 @@ public final class CameraManager {
     Camera theCamera = camera;
 
     if (theCamera != null && !previewing) {
-      buttonScanCustomView = this.FindViewById<Button>(Resource.Id.buttonScanCustomView);
-              buttonScanCustomView.Click += async delegate {
 
-                  //Tell our scanner we want to use a custom overlay instead of the default
-                  scanner.UseCustomOverlay = true;
-
-                  //Inflate our custom overlay from a resource layout
-                  zxingOverlay = LayoutInflater.FromContext(this).Inflate(Resource.Layout.ZxingOverlay, null);
-
-                  //Find the button from our resource layout and wire up the click event
-                  flashButton = zxingOverlay.FindViewById<Button>(Resource.Id.buttonZxingFlash);
-                  flashButton.Click += (sender, e) => scanner.ToggleTorch();
-
-                  //Set our custom overlay
-                  scanner.CustomOverlay = zxingOverlay;
-
-                  //Start scanning!
-                  var result = await scanner.Scan();
-
-                  HandleScanResult(result);
-              };
       theCamera.startPreview();
       previewing = true;
       autoFocusManager = new AutoFocusManager(context, camera);
