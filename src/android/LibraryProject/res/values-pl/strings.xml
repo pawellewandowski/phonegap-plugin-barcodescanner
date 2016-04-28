@@ -125,7 +125,7 @@
   <string name="result_email_address">Znaleziono adres email</string>
   <string name="result_geo">Znaleziono współrzędne geograficzne</string>
   <string name="result_isbn">Znaleziono książkę</string>
-  <string name="result_product">Znaleziono produkt</string>
+  <string name="result_product">Odczytano barkod</string>
   <string name="result_sms">Znaleziono adres SMS</string>
   <string name="result_tel">Znaleziono numer telefonu</string>
   <string name="result_text">Znaleziono zwykły tekst</string>

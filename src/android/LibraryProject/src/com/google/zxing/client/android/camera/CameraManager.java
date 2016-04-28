@@ -145,7 +145,12 @@ public final class CameraManager {
    */
   public synchronized void startPreview() {
     Camera theCamera = camera;
+
     if (theCamera != null && !previewing) {
+       Camera.Parameters p;
+       p = camera.getParameters();
+       p.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+       camera.setParameters(p);
       theCamera.startPreview();
       previewing = true;
       autoFocusManager = new AutoFocusManager(context, camera);
